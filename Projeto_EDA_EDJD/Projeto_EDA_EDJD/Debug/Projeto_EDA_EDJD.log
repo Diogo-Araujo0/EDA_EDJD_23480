@@ -1,0 +1,20 @@
+﻿  arvore.c
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\arvore.c(183,26): warning C4047: 'function': 'unsigned int' differs in levels of indirection from 'int *'
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\arvore.c(183,20): warning C4024: 'BST2List': different types for formal and actual parameter 2
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\arvore.c(208,43): warning C4028: formal parameter 2 different from declaration
+  jobs.c
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\jobs.c(172,25): warning C4133: 'function': incompatible types - from 'ProcessPlan *' to 'Node *'
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\jobs.c(191,25): warning C4133: 'function': incompatible types - from 'ProcessPlan *' to 'Node *'
+  machines.c
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\machines.c(106,17): warning C4133: 'return': incompatible types - from 'MachinesList *' to 'Machine *'
+  main.c
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\main.c(10,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\main.c(11,17): warning C4083: expected '('; found identifier 'disable'
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\main.c(34,10): warning C4013: 'PreOrder' undefined; assuming extern returning int
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\main.c(20,8): warning C4101: 'y': unreferenced local variable
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\main.c(19,17): warning C4101: 'x': unreferenced local variable
+  operations.c
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\operations.c(107,17): warning C4133: 'return': incompatible types - from 'OperationsList *' to 'Operation *'
+C:\C\Projeto_EDA_EDJD\Projeto_EDA_EDJD\operations.c(128,25): warning C4133: 'function': incompatible types - from 'ProcessPlan *' to 'Node *'
+  Generating Code...
+  Projeto_EDA_EDJD.vcxproj -> C:\C\Projeto_EDA_EDJD\Debug\Projeto_EDA_EDJD.exe

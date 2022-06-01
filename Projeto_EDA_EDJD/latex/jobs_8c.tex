@@ -1,0 +1,223 @@
+\hypertarget{jobs_8c}{}\doxysection{Projeto\+\_\+\+EDA\+\_\+\+EDJD/jobs.c File Reference}
+\label{jobs_8c}\index{Projeto\_EDA\_EDJD/jobs.c@{Projeto\_EDA\_EDJD/jobs.c}}
+
+
+Trabalho pratico da UC EDA (versao 2) Metodos para manipular as Structs \mbox{\hyperlink{struct_job}{Job}} e \mbox{\hyperlink{struct_process_plan}{Process\+Plan}}.  
+
+
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{jobs_8c_aee11fdabec4f085525f71d56868b5ca7}{Create\+Job}} (int cod, \mbox{\hyperlink{struct_operations_list}{Operations\+List}} $\ast$o)
+\begin{DoxyCompactList}\small\item\em Cria novo \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$ \mbox{\hyperlink{jobs_8c_a67358bac26629eb10d3c99a7e132f318}{Create\+Process\+Plan\+Node}} (\mbox{\hyperlink{struct_job}{Job}} $\ast$j)
+\begin{DoxyCompactList}\small\item\em Cria novo nodo para a Lista de Jobs Copia para o nodo da lista a informacao de um job. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$ \mbox{\hyperlink{jobs_8c_a12bb62d917893143fdf035c9a71a6318}{Insert\+Job\+In\+Process\+Plan}} (\mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$h, \mbox{\hyperlink{struct_job}{Job}} $\ast$new\+Job)
+\begin{DoxyCompactList}\small\item\em Insere um novo job na lista. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{jobs_8c_a77dcfbb7baae202cde0298943eecffa9}{Check\+Job\+Exists}} (\mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$h, int cod)
+\begin{DoxyCompactList}\small\item\em Verifica se um job existe na Lista de Jobs Procura se o job esta presente na Lista de Jobs, atraves do codigo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{jobs_8c_a440866241afc5a9ecc4a1bb1f07c7222}{Add\+New\+Operation\+To\+Job}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$h, int job\+Cod, \mbox{\hyperlink{struct_operation}{Operation}} $\ast$o)
+\begin{DoxyCompactList}\small\item\em Adiciona uma nova operacao ao \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{jobs_8c_a736ce83c45554dea9663a00344128518}{Remove\+Operation\+From\+Job}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$h, int job\+Cod, int op\+Cod)
+\begin{DoxyCompactList}\small\item\em Remove uma operacao do \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_job}{Job}} $\ast$ \mbox{\hyperlink{jobs_8c_a8365caeb72381fc4860880fce39d8395}{Search\+Job}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$h, int cod)
+\begin{DoxyCompactList}\small\item\em Verifica se o \mbox{\hyperlink{struct_job}{Job}} existe. Se existir devolve endereco do Job! \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operations_math}{Operations\+Math}} \mbox{\hyperlink{jobs_8c_a30bfde5d1435253942fd666156e81fe6}{Get\+Min\+Time\+To\+Complete\+Job}} (\mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$h, int job\+Cod)
+\begin{DoxyCompactList}\small\item\em Determinar o tempo minimo para completar o \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_operations_math}{Operations\+Math}} \mbox{\hyperlink{jobs_8c_a90d6e8bb0d91f65233a25f7f03edc410}{Get\+Max\+Time\+To\+Complete\+Job}} (\mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$h, int job\+Cod)
+\begin{DoxyCompactList}\small\item\em Determinar o tempo maximo para completar o \mbox{\hyperlink{struct_job}{Job}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trabalho pratico da UC EDA (versao 2) Metodos para manipular as Structs \mbox{\hyperlink{struct_job}{Job}} e \mbox{\hyperlink{struct_process_plan}{Process\+Plan}}. 
+
+\begin{DoxyAuthor}{Author}
+Diogo Araújo @email \href{mailto:a23480@alunos.ipca.pt}{\texttt{ a23480@alunos.\+ipca.\+pt}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000003}{Bug}}]bugs desconhecidos. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{jobs_8c_a440866241afc5a9ecc4a1bb1f07c7222}\label{jobs_8c_a440866241afc5a9ecc4a1bb1f07c7222}} 
+\index{jobs.c@{jobs.c}!AddNewOperationToJob@{AddNewOperationToJob}}
+\index{AddNewOperationToJob@{AddNewOperationToJob}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{AddNewOperationToJob()}{AddNewOperationToJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Add\+New\+Operation\+To\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{h,  }\item[{int}]{job\+Cod,  }\item[{\mbox{\hyperlink{struct_operation}{Operation}} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma nova operacao ao \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_process_plan}{Process\+Plan}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em job\+Cod} & Codigo do \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em o} & Apontador da lista de Operacoes adicionar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inicio da Lista do \mbox{\hyperlink{struct_process_plan}{Process\+Plan}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jobs_8c_a77dcfbb7baae202cde0298943eecffa9}\label{jobs_8c_a77dcfbb7baae202cde0298943eecffa9}} 
+\index{jobs.c@{jobs.c}!CheckJobExists@{CheckJobExists}}
+\index{CheckJobExists@{CheckJobExists}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{CheckJobExists()}{CheckJobExists()}}
+{\footnotesize\ttfamily bool Check\+Job\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$}]{h,  }\item[{int}]{cod }\end{DoxyParamCaption})}
+
+
+
+Verifica se um job existe na Lista de Jobs Procura se o job esta presente na Lista de Jobs, atraves do codigo. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_process_plan}{Process\+Plan}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & Codigo do \mbox{\hyperlink{struct_job}{Job}} a procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ \mbox{\hyperlink{struct_job}{Job}} existe na lista; false -\/ \mbox{\hyperlink{struct_job}{Job}} nao esta presente na lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jobs_8c_aee11fdabec4f085525f71d56868b5ca7}\label{jobs_8c_aee11fdabec4f085525f71d56868b5ca7}} 
+\index{jobs.c@{jobs.c}!CreateJob@{CreateJob}}
+\index{CreateJob@{CreateJob}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{CreateJob()}{CreateJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}}$\ast$ Create\+Job (\begin{DoxyParamCaption}\item[{int}]{cod,  }\item[{\mbox{\hyperlink{struct_operations_list}{Operations\+List}} $\ast$}]{o }\end{DoxyParamCaption})}
+
+
+
+Cria novo \mbox{\hyperlink{struct_job}{Job}}. 
+
+Aloca memoria necessaria para armazenar um job em memoria
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cod} & Codigo do \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em o} & Inicio da Lista de Operacoes \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{jobs_8c_a67358bac26629eb10d3c99a7e132f318}\label{jobs_8c_a67358bac26629eb10d3c99a7e132f318}} 
+\index{jobs.c@{jobs.c}!CreateProcessPlanNode@{CreateProcessPlanNode}}
+\index{CreateProcessPlanNode@{CreateProcessPlanNode}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{CreateProcessPlanNode()}{CreateProcessPlanNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_process_plan}{Process\+Plan}}$\ast$ Create\+Process\+Plan\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{j }\end{DoxyParamCaption})}
+
+
+
+Cria novo nodo para a Lista de Jobs Copia para o nodo da lista a informacao de um job. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em j} & Novo \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para nodo criado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jobs_8c_a90d6e8bb0d91f65233a25f7f03edc410}\label{jobs_8c_a90d6e8bb0d91f65233a25f7f03edc410}} 
+\index{jobs.c@{jobs.c}!GetMaxTimeToCompleteJob@{GetMaxTimeToCompleteJob}}
+\index{GetMaxTimeToCompleteJob@{GetMaxTimeToCompleteJob}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{GetMaxTimeToCompleteJob()}{GetMaxTimeToCompleteJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operations_math}{Operations\+Math}} Get\+Max\+Time\+To\+Complete\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$}]{h,  }\item[{int}]{job\+Cod }\end{DoxyParamCaption})}
+
+
+
+Determinar o tempo maximo para completar o \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_process_plan}{Process\+Plan}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em job\+Cod} & Codigo do \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct com o tempo maximo para completar o \mbox{\hyperlink{struct_job}{Job}} e as respetivas operacoes, com as maquinas para obter esse valor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jobs_8c_a30bfde5d1435253942fd666156e81fe6}\label{jobs_8c_a30bfde5d1435253942fd666156e81fe6}} 
+\index{jobs.c@{jobs.c}!GetMinTimeToCompleteJob@{GetMinTimeToCompleteJob}}
+\index{GetMinTimeToCompleteJob@{GetMinTimeToCompleteJob}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{GetMinTimeToCompleteJob()}{GetMinTimeToCompleteJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_operations_math}{Operations\+Math}} Get\+Min\+Time\+To\+Complete\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$}]{h,  }\item[{int}]{job\+Cod }\end{DoxyParamCaption})}
+
+
+
+Determinar o tempo minimo para completar o \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_process_plan}{Process\+Plan}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em job\+Cod} & Codigo do \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struct com o tempo minimo para completar o \mbox{\hyperlink{struct_job}{Job}} e as respetivas operacoes, com as maquinas para obter esse valor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jobs_8c_a12bb62d917893143fdf035c9a71a6318}\label{jobs_8c_a12bb62d917893143fdf035c9a71a6318}} 
+\index{jobs.c@{jobs.c}!InsertJobInProcessPlan@{InsertJobInProcessPlan}}
+\index{InsertJobInProcessPlan@{InsertJobInProcessPlan}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{InsertJobInProcessPlan()}{InsertJobInProcessPlan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_process_plan}{Process\+Plan}}$\ast$ Insert\+Job\+In\+Process\+Plan (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_job}{Job}} $\ast$}]{new\+Job }\end{DoxyParamCaption})}
+
+
+
+Insere um novo job na lista. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_process_plan}{Process\+Plan}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+Job} & Apontador do \mbox{\hyperlink{struct_job}{Job}} a adicionar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{jobs_8c_a736ce83c45554dea9663a00344128518}\label{jobs_8c_a736ce83c45554dea9663a00344128518}} 
+\index{jobs.c@{jobs.c}!RemoveOperationFromJob@{RemoveOperationFromJob}}
+\index{RemoveOperationFromJob@{RemoveOperationFromJob}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{RemoveOperationFromJob()}{RemoveOperationFromJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ Remove\+Operation\+From\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{h,  }\item[{int}]{job\+Cod,  }\item[{int}]{op\+Cod }\end{DoxyParamCaption})}
+
+
+
+Remove uma operacao do \mbox{\hyperlink{struct_job}{Job}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_process_plan}{Process\+Plan}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em job\+Cod} & Codigo do \mbox{\hyperlink{struct_job}{Job}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em op\+Cod} & Codigo da Operacao a remover \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Inicio da Lista do \mbox{\hyperlink{struct_process_plan}{Process\+Plan}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{jobs_8c_a8365caeb72381fc4860880fce39d8395}\label{jobs_8c_a8365caeb72381fc4860880fce39d8395}} 
+\index{jobs.c@{jobs.c}!SearchJob@{SearchJob}}
+\index{SearchJob@{SearchJob}!jobs.c@{jobs.c}}
+\doxysubsubsection{\texorpdfstring{SearchJob()}{SearchJob()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_job}{Job}}$\ast$ Search\+Job (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{h,  }\item[{int}]{cod }\end{DoxyParamCaption})}
+
+
+
+Verifica se o \mbox{\hyperlink{struct_job}{Job}} existe. Se existir devolve endereco do Job! 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_process_plan}{Process\+Plan}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & Codigo do \mbox{\hyperlink{struct_job}{Job}} a procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para o \mbox{\hyperlink{struct_job}{Job}} encontrado 
+\end{DoxyReturn}

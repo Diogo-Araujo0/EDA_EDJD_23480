@@ -1,0 +1,252 @@
+\hypertarget{machines_8c}{}\doxysection{Projeto\+\_\+\+EDA\+\_\+\+EDJD/machines.c File Reference}
+\label{machines_8c}\index{Projeto\_EDA\_EDJD/machines.c@{Projeto\_EDA\_EDJD/machines.c}}
+
+
+Trabalho pratico da UC EDA (versao 2) Metodos para manipular as Structs \mbox{\hyperlink{struct_machine}{Machine}} e \mbox{\hyperlink{struct_machines_list}{Machines\+List}}.  
+
+
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_machine}{Machine}} $\ast$ \mbox{\hyperlink{machines_8c_a4905f0ee8d9b67e7851142ce602742c1}{Create\+Machine}} (int cod, int time)
+\begin{DoxyCompactList}\small\item\em Cria nova \mbox{\hyperlink{struct_machine}{Machine}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$ \mbox{\hyperlink{machines_8c_a3ff0b50dce2a0539870c59672cdf2809}{Create\+Machine\+List\+Node}} (\mbox{\hyperlink{struct_machine}{Machine}} $\ast$m)
+\begin{DoxyCompactList}\small\item\em Cria novo nodo para a Lista de Maquinas Copia para o nodo da lista a informacao de uma \mbox{\hyperlink{struct_machine}{Machine}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$ \mbox{\hyperlink{machines_8c_a8e66614aeb5a837f6f4becd2b224c1c6}{Insert\+Machine\+In\+Machines\+List}} (\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$h, \mbox{\hyperlink{struct_machine}{Machine}} $\ast$new\+Machine)
+\begin{DoxyCompactList}\small\item\em Insere uma nova \mbox{\hyperlink{struct_machine}{Machine}} na lista. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{machines_8c_a4df84032003ee3fabfd650bcc95e862e}{Check\+Machine\+Exists}} (\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$h, int cod)
+\begin{DoxyCompactList}\small\item\em Verifica se uma \mbox{\hyperlink{struct_machine}{Machine}} existe a Lista de Maquinas Procura se a \mbox{\hyperlink{struct_machine}{Machine}} esta presente na Lista de Maquinas, atraves do codigo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_machine}{Machine}} $\ast$ \mbox{\hyperlink{machines_8c_abb35c55e5817f1b5daf936bd9dd8cb9e}{Search\+Machine}} (\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$h, int cod)
+\begin{DoxyCompactList}\small\item\em Verifica se a \mbox{\hyperlink{struct_machine}{Machine}} existe. Se existir devolve endereco da Machine! \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{machines_8c_a3d9833da4e2f8e45c929e13065a7480a}{Sum\+Machine\+Time}} (\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Soma todos os tempos das maquinas presentes numa Lista de Maquinas. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{machines_8c_acf52e438306e61b06102beaff08f48f5}{Count\+Machines}} (\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Conta todas as maquinas presentes numa Lista de Maquinas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_machine}{Machine}} $\ast$ \mbox{\hyperlink{machines_8c_a57ed965654050cf4455f29a035c55d2d}{Change\+Machine}} (\mbox{\hyperlink{struct_machine}{Machine}} $\ast$h, int new\+Mac\+Cod, int new\+Time)
+\begin{DoxyCompactList}\small\item\em Altera os dados de uma maquina. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_machine}{Machine}} $\ast$ \mbox{\hyperlink{machines_8c_af365ec116428fe20c156ff695bf96e69}{Get\+Machine\+With\+Lower\+Time}} (\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinar a maquina com menor tempo numa Lista de Maquinas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_machine}{Machine}} $\ast$ \mbox{\hyperlink{machines_8c_a68d8e54aedde6019d51354ce479cc8cb}{Get\+Machine\+With\+Higher\+Time}} (\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Determinar a maquina com maior tempo numa Lista de Maquinas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{machines_8c_a732a6e4510ddfad7068585107eaca427}{List\+Machines}} (\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$h)
+\begin{DoxyCompactList}\small\item\em Lista todas as maquinas de uma Lista de Maquinas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Trabalho pratico da UC EDA (versao 2) Metodos para manipular as Structs \mbox{\hyperlink{struct_machine}{Machine}} e \mbox{\hyperlink{struct_machines_list}{Machines\+List}}. 
+
+\begin{DoxyAuthor}{Author}
+Diogo Araújo @email \href{mailto:a23480@alunos.ipca.pt}{\texttt{ a23480@alunos.\+ipca.\+pt}} 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022
+\end{DoxyDate}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000004}{Bug}}]bugs desconhecidos. \end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{machines_8c_a57ed965654050cf4455f29a035c55d2d}\label{machines_8c_a57ed965654050cf4455f29a035c55d2d}} 
+\index{machines.c@{machines.c}!ChangeMachine@{ChangeMachine}}
+\index{ChangeMachine@{ChangeMachine}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{ChangeMachine()}{ChangeMachine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machine}{Machine}}$\ast$ Change\+Machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machine}{Machine}} $\ast$}]{h,  }\item[{int}]{new\+Mac\+Cod,  }\item[{int}]{new\+Time }\end{DoxyParamCaption})}
+
+
+
+Altera os dados de uma maquina. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Apontador da \mbox{\hyperlink{struct_machine}{Machine}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+Mac\+Cod} & Novo codigo para a maquina \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+Time} & Novo tempo para a maquina \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador da \mbox{\hyperlink{struct_machine}{Machine}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{machines_8c_a4df84032003ee3fabfd650bcc95e862e}\label{machines_8c_a4df84032003ee3fabfd650bcc95e862e}} 
+\index{machines.c@{machines.c}!CheckMachineExists@{CheckMachineExists}}
+\index{CheckMachineExists@{CheckMachineExists}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{CheckMachineExists()}{CheckMachineExists()}}
+{\footnotesize\ttfamily bool Check\+Machine\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$}]{h,  }\item[{int}]{cod }\end{DoxyParamCaption})}
+
+
+
+Verifica se uma \mbox{\hyperlink{struct_machine}{Machine}} existe a Lista de Maquinas Procura se a \mbox{\hyperlink{struct_machine}{Machine}} esta presente na Lista de Maquinas, atraves do codigo. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_machines_list}{Machines\+List}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & Codigo da \mbox{\hyperlink{struct_machine}{Machine}} a procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ \mbox{\hyperlink{struct_machine}{Machine}} existe na lista; false -\/ \mbox{\hyperlink{struct_machine}{Machine}} nao esta presente na lista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{machines_8c_acf52e438306e61b06102beaff08f48f5}\label{machines_8c_acf52e438306e61b06102beaff08f48f5}} 
+\index{machines.c@{machines.c}!CountMachines@{CountMachines}}
+\index{CountMachines@{CountMachines}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{CountMachines()}{CountMachines()}}
+{\footnotesize\ttfamily int Count\+Machines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Conta todas as maquinas presentes numa Lista de Maquinas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_machines_list}{Machines\+List}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Total de maquinas 
+\end{DoxyReturn}
+\mbox{\Hypertarget{machines_8c_a4905f0ee8d9b67e7851142ce602742c1}\label{machines_8c_a4905f0ee8d9b67e7851142ce602742c1}} 
+\index{machines.c@{machines.c}!CreateMachine@{CreateMachine}}
+\index{CreateMachine@{CreateMachine}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{CreateMachine()}{CreateMachine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machine}{Machine}}$\ast$ Create\+Machine (\begin{DoxyParamCaption}\item[{int}]{cod,  }\item[{int}]{time }\end{DoxyParamCaption})}
+
+
+
+Cria nova \mbox{\hyperlink{struct_machine}{Machine}}. 
+
+Aloca memoria necessaria para armazenar uma \mbox{\hyperlink{struct_machine}{Machine}} em memoria
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em cod} & Codigo da \mbox{\hyperlink{struct_machine}{Machine}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em time} & Tempo para realizar tarefa \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{machines_8c_a3ff0b50dce2a0539870c59672cdf2809}\label{machines_8c_a3ff0b50dce2a0539870c59672cdf2809}} 
+\index{machines.c@{machines.c}!CreateMachineListNode@{CreateMachineListNode}}
+\index{CreateMachineListNode@{CreateMachineListNode}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{CreateMachineListNode()}{CreateMachineListNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machines_list}{Machines\+List}}$\ast$ Create\+Machine\+List\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machine}{Machine}} $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+Cria novo nodo para a Lista de Maquinas Copia para o nodo da lista a informacao de uma \mbox{\hyperlink{struct_machine}{Machine}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em m} & Nova \mbox{\hyperlink{struct_machine}{Machine}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para nodo criado 
+\end{DoxyReturn}
+\mbox{\Hypertarget{machines_8c_a68d8e54aedde6019d51354ce479cc8cb}\label{machines_8c_a68d8e54aedde6019d51354ce479cc8cb}} 
+\index{machines.c@{machines.c}!GetMachineWithHigherTime@{GetMachineWithHigherTime}}
+\index{GetMachineWithHigherTime@{GetMachineWithHigherTime}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{GetMachineWithHigherTime()}{GetMachineWithHigherTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machine}{Machine}}$\ast$ Get\+Machine\+With\+Higher\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinar a maquina com maior tempo numa Lista de Maquinas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_machines_list}{Machines\+List}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador da copia da \mbox{\hyperlink{struct_machine}{Machine}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{machines_8c_af365ec116428fe20c156ff695bf96e69}\label{machines_8c_af365ec116428fe20c156ff695bf96e69}} 
+\index{machines.c@{machines.c}!GetMachineWithLowerTime@{GetMachineWithLowerTime}}
+\index{GetMachineWithLowerTime@{GetMachineWithLowerTime}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{GetMachineWithLowerTime()}{GetMachineWithLowerTime()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machine}{Machine}}$\ast$ Get\+Machine\+With\+Lower\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Determinar a maquina com menor tempo numa Lista de Maquinas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_machines_list}{Machines\+List}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador da copia da \mbox{\hyperlink{struct_machine}{Machine}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{machines_8c_a8e66614aeb5a837f6f4becd2b224c1c6}\label{machines_8c_a8e66614aeb5a837f6f4becd2b224c1c6}} 
+\index{machines.c@{machines.c}!InsertMachineInMachinesList@{InsertMachineInMachinesList}}
+\index{InsertMachineInMachinesList@{InsertMachineInMachinesList}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{InsertMachineInMachinesList()}{InsertMachineInMachinesList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machines_list}{Machines\+List}}$\ast$ Insert\+Machine\+In\+Machines\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$}]{h,  }\item[{\mbox{\hyperlink{struct_machine}{Machine}} $\ast$}]{new\+Machine }\end{DoxyParamCaption})}
+
+
+
+Insere uma nova \mbox{\hyperlink{struct_machine}{Machine}} na lista. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista de Maquinas \\
+\hline
+\mbox{\texttt{ in}}  & {\em new\+Operation} & Apontador da \mbox{\hyperlink{struct_machine}{Machine}} a adicionar \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{machines_8c_a732a6e4510ddfad7068585107eaca427}\label{machines_8c_a732a6e4510ddfad7068585107eaca427}} 
+\index{machines.c@{machines.c}!ListMachines@{ListMachines}}
+\index{ListMachines@{ListMachines}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{ListMachines()}{ListMachines()}}
+{\footnotesize\ttfamily void List\+Machines (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Lista todas as maquinas de uma Lista de Maquinas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista de Maquinas \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{machines_8c_abb35c55e5817f1b5daf936bd9dd8cb9e}\label{machines_8c_abb35c55e5817f1b5daf936bd9dd8cb9e}} 
+\index{machines.c@{machines.c}!SearchMachine@{SearchMachine}}
+\index{SearchMachine@{SearchMachine}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{SearchMachine()}{SearchMachine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_machine}{Machine}}$\ast$ Search\+Machine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$}]{h,  }\item[{int}]{cod }\end{DoxyParamCaption})}
+
+
+
+Verifica se a \mbox{\hyperlink{struct_machine}{Machine}} existe. Se existir devolve endereco da Machine! 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_machines_list}{Machines\+List}} \\
+\hline
+\mbox{\texttt{ in}}  & {\em cod} & Codigo da \mbox{\hyperlink{struct_machine}{Machine}} a procurar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Apontador para a \mbox{\hyperlink{struct_machine}{Machine}} encontrada 
+\end{DoxyReturn}
+\mbox{\Hypertarget{machines_8c_a3d9833da4e2f8e45c929e13065a7480a}\label{machines_8c_a3d9833da4e2f8e45c929e13065a7480a}} 
+\index{machines.c@{machines.c}!SumMachineTime@{SumMachineTime}}
+\index{SumMachineTime@{SumMachineTime}!machines.c@{machines.c}}
+\doxysubsubsection{\texorpdfstring{SumMachineTime()}{SumMachineTime()}}
+{\footnotesize\ttfamily int Sum\+Machine\+Time (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_machines_list}{Machines\+List}} $\ast$}]{h }\end{DoxyParamCaption})}
+
+
+
+Soma todos os tempos das maquinas presentes numa Lista de Maquinas. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em h} & Inicio da Lista do \mbox{\hyperlink{struct_machines_list}{Machines\+List}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Total da soma 
+\end{DoxyReturn}

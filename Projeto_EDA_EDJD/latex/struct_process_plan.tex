@@ -1,0 +1,43 @@
+\hypertarget{struct_process_plan}{}\doxysection{Process\+Plan Struct Reference}
+\label{struct_process_plan}\index{ProcessPlan@{ProcessPlan}}
+
+
+Estrutura para armazenar os trabalhos.  
+
+
+
+
+{\ttfamily \#include $<$header.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_job}{Job}} \mbox{\hyperlink{struct_process_plan_ac4c42677a020e90d916d4344a26a3f21}{job}}
+\item 
+struct \mbox{\hyperlink{struct_process_plan}{Process\+Plan}} $\ast$ \mbox{\hyperlink{struct_process_plan_afcea6e65edb245c561e57036c9bf4c11}{next\+Job}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Estrutura para armazenar os trabalhos. 
+
+Uma lista de trabalhos contem a estrutura do tipo \mbox{\hyperlink{struct_job}{Job}} (@job) e o apontador para o proximo trabalho (@next\+Job). 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_process_plan_ac4c42677a020e90d916d4344a26a3f21}\label{struct_process_plan_ac4c42677a020e90d916d4344a26a3f21}} 
+\index{ProcessPlan@{ProcessPlan}!job@{job}}
+\index{job@{job}!ProcessPlan@{ProcessPlan}}
+\doxysubsubsection{\texorpdfstring{job}{job}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_job}{Job}} Process\+Plan\+::job}
+
+toda a informacao do \mbox{\hyperlink{struct_job}{Job}} \mbox{\Hypertarget{struct_process_plan_afcea6e65edb245c561e57036c9bf4c11}\label{struct_process_plan_afcea6e65edb245c561e57036c9bf4c11}} 
+\index{ProcessPlan@{ProcessPlan}!nextJob@{nextJob}}
+\index{nextJob@{nextJob}!ProcessPlan@{ProcessPlan}}
+\doxysubsubsection{\texorpdfstring{nextJob}{nextJob}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_process_plan}{Process\+Plan}}$\ast$ Process\+Plan\+::next\+Job}
+
+Ligacao o outro \mbox{\hyperlink{struct_job}{Job}} 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Projeto\+\_\+\+EDA\+\_\+\+EDJD/\mbox{\hyperlink{header_8h}{header.\+h}}\end{DoxyCompactItemize}
